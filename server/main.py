@@ -304,6 +304,11 @@ def get_monthly_trends():
     result.sort(key=lambda x: x['month'])
     return result
 
+@app.get("/api/tasks")
+def get_tasks():
+    """Get tasks list (currently no server-side tasks)"""
+    return []
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8001)
